@@ -43,6 +43,14 @@ public class CoordinateTuplesJsonConverter : JsonConverter<IEnumerable<LatLng>>
     /// <inheritdoc />
     public override void Write(Utf8JsonWriter writer, IEnumerable<LatLng> value, JsonSerializerOptions options)
     {
-        throw new NotImplementedException();
+		writer.WriteRawValue(JsonSerializer.Serialize(value, options));
+  //  writer.WriteStartArray();
+		//foreach(var ll in value)
+		//	{
+		//	writer.WriteStartObject();
+		//	writer.WriteStringValue($"{ll.Latitude}, {ll.Longitude}");
+		//	writer.WriteEndObject();
+		//	}
+		//writer.WriteEndArray();
     }
 }

@@ -31,6 +31,7 @@ public class SortExpressionJsonConverter : JsonConverter<SortExpression>
     /// <inheritdoc />
     public override void Write(Utf8JsonWriter writer, SortExpression value, JsonSerializerOptions options)
     {
-        throw new NotImplementedException();
+		writer.WriteRawValue(JsonSerializer.Serialize(value, options));
+        //writer.WriteStringValue(value.ToString());
     }
 }

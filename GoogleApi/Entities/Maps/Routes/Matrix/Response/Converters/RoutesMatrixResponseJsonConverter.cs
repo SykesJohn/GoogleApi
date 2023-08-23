@@ -33,6 +33,6 @@ public class RoutesMatrixResponseJsonConverter : JsonConverter<RoutesMatrixRespo
     /// <inheritdoc />
     public override void Write(Utf8JsonWriter writer, RoutesMatrixResponse value, JsonSerializerOptions options)
     {
-        throw new NotImplementedException();
+        writer.WriteRawValue(JsonSerializer.Serialize(value));
     }
 }

@@ -34,6 +34,6 @@ public class StringSecondsTimeSpanJsonConverter : JsonConverter<TimeSpan>
     /// <inheritdoc />
     public override void Write(Utf8JsonWriter writer, TimeSpan value, JsonSerializerOptions options)
     {
-        throw new NotImplementedException();
-    }
-}
+		writer.WriteRawValue(JsonSerializer.Serialize(value, options));
+		}
+	}
