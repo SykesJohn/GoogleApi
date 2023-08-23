@@ -136,5 +136,5 @@ public enum ManeuverAction
     /// Keep Right.
     /// </summary>
     [EnumMember(Value = "keep-right")]
-    Keep_Right
+    Keep_Right,
 }
