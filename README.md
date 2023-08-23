@@ -59,6 +59,9 @@ public class MyClass
 ```
 See below for a full list of supported Api's and actions.  
 
+#### Proxy
+If a ```WebProxy``` is required set the static property ```HttpClientFactory.Proxy``` before registrering the GoogleApi dependencies or using the Facade.  
+
 *** 
 
 ### Supported Api's
@@ -87,7 +90,7 @@ The following api's are supported.
   * Address Validation (```GoogleMaps.AddressValidation```)
   * Aerial View (*beta*)
     * Directions (```GoogleMaps.AerialView.GetVideo```)
-    * Matrix (```GoogleMaps.AerialView.RenderVideo```)
+    * Render Video (```GoogleMaps.AerialView.RenderVideo```)
 
 ##### Google Places
   * Place Search
